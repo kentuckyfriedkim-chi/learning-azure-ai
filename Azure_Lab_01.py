@@ -1,33 +1,3 @@
-'''
-Project Overview: Language Detection with Azure AI Services
-
-This project demonstrates two methods for implementing a language detection model using Azure AI Services: a REST client and an SDK client. Both methods use
-environment variables for secure access to Azure AI resources, specifically utilizing the Text Analytics Language Detection API.
-
-REST Client (rest-client.py): The REST client method utilizes HTTP. client to make direct HTTP POST requests to the Azure Text Analytics API.
-In this script, the GetLanguage function constructs a JSON request with the user-provided text and sends it to the API endpoint specified in .env variables.
-The response returns the detected language, displayed in the console. This method is more flexible, providing insights into the request and response structure, and is
-suitable for environments where a lower-level API interaction is preferred.
-
-SDK Client (sdk-client.py): The SDK client method leverages Azure's TextAnalyticsClient for simpler and more secure access to the language detection service. 
-This script also gathers input text from the user but uses Azure’s TextAnalyticsClient.detect_language function for direct language detection. 
-The SDK simplifies authentication and API calls,
-requiring minimal configuration and error handling, making it suitable for rapid development and environments where Azure's Python SDK is supported.
-
-Both approaches offer flexibility based on application needs, allowing developers to interact with Azure AI Services through different methods 
-while achieving consistent results.
-This repository serves as a foundation for experimenting with Azure AI’s language detection capabilities and can be adapted to include additional 
-NLP functionalities or integrated into larger projects
-
-for example-
-input: 
-Enter some text ("quit" to stop)
-hello
-output :
-Language: English
-'''
-
-
 # Language detection model using Azure AI services
  
 
@@ -177,13 +147,31 @@ if __name__ == "__main__":
 
 
 
+'''
+Project Overview: Language Detection with Azure AI Services
 
+This project demonstrates two methods for implementing a language detection model using Azure AI Services: a REST client and an SDK client. Both methods use
+environment variables for secure access to Azure AI resources, specifically utilizing the Text Analytics Language Detection API.
 
+REST Client (rest-client.py): The REST client method utilizes HTTP. client to make direct HTTP POST requests to the Azure Text Analytics API.
+In this script, the GetLanguage function constructs a JSON request with the user-provided text and sends it to the API endpoint specified in .env variables.
+The response returns the detected language, displayed in the console. This method is more flexible, providing insights into the request and response structure, and is
+suitable for environments where a lower-level API interaction is preferred.
 
+SDK Client (sdk-client.py): The SDK client method leverages Azure's TextAnalyticsClient for simpler and more secure access to the language detection service. 
+This script also gathers input text from the user but uses Azure’s TextAnalyticsClient.detect_language function for direct language detection. 
+The SDK simplifies authentication and API calls,
+requiring minimal configuration and error handling, making it suitable for rapid development and environments where Azure's Python SDK is supported.
 
+Both approaches offer flexibility based on application needs, allowing developers to interact with Azure AI Services through different methods 
+while achieving consistent results.
+This repository serves as a foundation for experimenting with Azure AI’s language detection capabilities and can be adapted to include additional 
+NLP functionalities or integrated into larger projects
 
-
-
-
-
-
+for example-
+input: 
+Enter some text ("quit" to stop)
+hello
+output :
+Language: English
+'''
